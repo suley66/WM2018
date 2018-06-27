@@ -1,4 +1,4 @@
-
+import java.util.ArrayList;
 /**
  * Beschreiben Sie hier die Klasse Mannschaften.
  * 
@@ -8,26 +8,34 @@
 public class Mannschaften
 {
     // Instanzvariablen - ersetzen Sie das folgende Beispiel mit Ihren Variablen
-    private int x;
+    private String mannschaftsName;
+    private String trainer;
+    private ArrayList<String> kader;
 
     /**
      * Konstruktor für Objekte der Klasse Mannschaften
      */
-    public Mannschaften()
+    public Mannschaften(String mannschaftsName, String trainer)
     {
         // Instanzvariable initialisieren
-        x = 0;
+        this.mannschaftsName = mannschaftsName;
+        this.trainer = trainer;
+        kader = new ArrayList<String>();
     }
-
-    /**
-     * Ein Beispiel einer Methode - ersetzen Sie diesen Kommentar mit Ihrem eigenen
-     * 
-     * @param  y    ein Beispielparameter für eine Methode
-     * @return        die Summe aus x und y
-     */
-    public int beispielMethode(int y)
+    
+    public String gibName()
+    
     {
-        // tragen Sie hier den Code ein
-        return x + y;
+        return mannschaftsName;
+    }
+    
+    public String gibTrainer()
+    {
+        return trainer;
+    }
+    
+    public void spielerHinzufuegen(String Spieler)
+    {
+        kader.add(Spieler);
     }
 }
