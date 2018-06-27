@@ -31,6 +31,23 @@ public class Spiel
         this.heimtore = heim;
         this.gasttore = gast;
     }
+    
+    public Mannschaften gewinner()
+    {
+        if(heimtore > gasttore)
+        {
+            return heimmannschaft;
+        }
+        else if(heimtore < gasttore)
+        {
+            return gastmannschaft;
+        }
+        else if(heimtore == gasttore)
+        {
+            return null;
+        }
+        return null;
+    }
 
     public Mannschaften gibHeimMannschaft()
     {

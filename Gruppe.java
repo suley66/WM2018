@@ -1,4 +1,4 @@
-
+import java.util.ArrayList;
 /**
  * Beschreiben Sie hier die Klasse Gruppe.
  * 
@@ -8,15 +8,23 @@
 public class Gruppe
 {
     // Instanzvariablen - ersetzen Sie das folgende Beispiel mit Ihren Variablen
-    private Mannschaften mannschaft;
+    private String name;
+    private ArrayList<Mannschaften> mannschaften;
     private Spiel spiele;
 
     /**
      * Konstruktor für Objekte der Klasse Gruppe
      */
-    public Gruppe()
+    public Gruppe(String name)
     {
-        // Instanzvariable initialisieren
+        this.name = name;
+        mannschaften = new ArrayList<Mannschaften>();
     }
 
+    public void mannschaftHinzufuegen(Mannschaften mannschaft)
+    {
+        mannschaften.add(mannschaft);
+    }
+    
+    
 }
