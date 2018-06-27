@@ -25,6 +25,12 @@ public class Spiel
         this.datum = datum;
         this.ort = ort;
     }
+    
+    public void setzeTore(int heim, int gast)
+    {
+        this.heimtore = heim;
+        this.gasttore = gast;
+    }
 
     public Mannschaften gibHeimMannschaft()
     {
